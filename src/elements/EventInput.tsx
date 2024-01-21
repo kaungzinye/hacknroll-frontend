@@ -43,15 +43,7 @@ const EventInput: React.FC<ChildComponentProps> = ({handleCreateEvent,handleEven
     setEventName(data.eventName); // Update state with the event name
     setEventDetails(data.eventDetails);
     handleEventData(data.eventName, data.eventDetails);
-    // const preJsonData = {
-    //   event_name: data.eventName,
-    //   event_details: data.eventDetails
-    // }
-    // const jsonData = JSON.stringify(preJsonData, null, 2)
-    // console.log(eventName);
-    // console.log(eventDetails);
-    // console.log(jsonData);
-    // tg.sendData(jsonData)
+
   }
   const onSubmit = (data: z.infer<typeof formSchema>) => {
     sendData(data);

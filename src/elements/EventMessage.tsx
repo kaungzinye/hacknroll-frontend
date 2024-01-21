@@ -16,11 +16,8 @@ import { Button } from '@/components/ui/button'
 type ChildComponentProps = {
   handleEventMessage: () => void;
   handleEdit: () => void
-  eventName: string;
-  eventDetails: string
 };
-const EventMessage: React.FC<ChildComponentProps>  = ({handleEventMessage, handleEdit, eventName, eventDetails}) => {
-  console.log(eventName);
+const EventMessage: React.FC<ChildComponentProps>  = ({handleEventMessage, handleEdit }) => {
 
   const formatDate = (date: Date | null): string | null => {
     return date ? date.toLocaleDateString() : null; // Or use toLocaleDateString(), etc.
@@ -31,15 +28,12 @@ const EventMessage: React.FC<ChildComponentProps>  = ({handleEventMessage, handl
     <div className='h-screen flex flex-col text-start justify-center items-center mx-20 p-4 m-auto'>
         <Alert>
         <AlertTitle> <h2 className="scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0">
-      {eventDetails}
     </h2></AlertTitle>
         <AlertDescription>
         <h4 className="scroll-m-20 text-xl pb-2 border-b font-semibold tracking-tight">
       Date Range:
     </h4>
-    <p className="leading-7 [&:not(:first-child)]:mt-6">
-      {eventDetails}
-    </p>
+    <p className="leading-7 [&:not(:first-child)]:mt-6">    </p>
         </AlertDescription>
     </Alert>
   
